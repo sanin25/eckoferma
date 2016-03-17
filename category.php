@@ -10,8 +10,12 @@
 get_header(); // Подключаем хедер ?>
 <div class="gatpost">
 	<div class="cetegory clearfix">
+	<?php if ( function_exists('yoast_breadcrumb') ) 
+{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
+
 <h1><?php wp_title(''); // Заголовок категории ?></h1>
 				
+			<div class="wrapper clearfix">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); // Цикл записей ?>
 				<div class="cat">
 					<h2><?php the_title(); ?></h2>
@@ -35,6 +39,7 @@ get_header(); // Подключаем хедер ?>
 										
 				</div>
 		<?php endwhile; ?>
+		</div>
 		<?php wp_reset_postdata();?>
 				
 			</div>

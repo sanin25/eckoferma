@@ -320,6 +320,7 @@ body {
 		    position: relative;
 		    top: 18px;
 		    color: $color_link;
+		    text-align: center;
 		}
 		input{
 			    height: 28px;
@@ -357,4 +358,18 @@ body {
 }
 .bx-viewport{
 	overflow:visible !important;
+}
+#breadcrumbs{
+	padding: 20px;
+	font-size: 136%;
+	font-family: cursive;
+	letter-spacing: 1px;
+	>span{
+		background: rgba(168, 191, 169, 0.56);
+		padding: 10px;
+		@include border-radius(4px);
+	}
+	a{
+	color:$color_link;
+	}
 }

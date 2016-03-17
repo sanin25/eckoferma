@@ -13,8 +13,23 @@
  .kyri{
  	@extend .gusi;
  }
+
  .cetegory{
  	@extend .gusibody; 
+ 	width: 100%;
+ 	background:url(../img/bg-cat.png) 0 0 repeat;
+ 	.wrapper{
+ 		width: 90%;
+ 		margin:0 auto;
+ 	}
+ 		h1{
+ 			text-align: center;
+ 			border-bottom: 7px solid #F2FF29;
+ 			border-top: 5px solid #1932E6;
+ 			width: 100%;
+ 			color: $color_link;
+ 			background: url(../img/bg-h1.png) 0 0 repeat;
+ 		}
  	.cat{
  		@extend .gusi ;
  		visibility: visible!important;
