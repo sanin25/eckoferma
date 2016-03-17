@@ -1,7 +1,7 @@
-jQuery.fn.exists = function() {
+jQuery(document).ready(function($) {
+jQuery.fn.exist = function() {
    return $(this).length;
 }
-jQuery(document).ready(function($) {
   function setHeiHeight() {
       $('.container').css({
           height: $(window).height() + 'px'
@@ -35,19 +35,12 @@ jQuery(document).ready(function($) {
 
   });
   /*Облока*/
+  if($('.cont4').exist()){    
   var cont4 = $('.cont4').offset().top - par;
-  var cont5 = $('.cont5').offset().top - par;
-  console.log(cont4);
-  if( cont4 < 50){
+  if( cont4 < 250){
     
   	$('.gusi').css('visibility', 'visible').addClass('animated bounceInLeft');
     
-  }
-    if( cont5 < 50){
-    
-    $('.pavlin').css('visibility', 'visible').addClass('animated bounceInRight');
-    
-  }
   var i = $('.cont4').offset().top - par;
   $("#obl1").css({
   	 "transform" :"translate3d(" + i / 2 + "%," + i/8  + "%, 0px)",
@@ -57,6 +50,18 @@ jQuery(document).ready(function($) {
    $("#obl2").css({
   	"right" :"" + par /60 + "%",
   	});
+  }
+  }
+
+  if($('.cont5').exist()){    
+  var cont5 = $('.cont5').offset().top - par;
+    if( cont5 < 250){
+    
+    $('.pavlin').css('visibility', 'visible').addClass('animated bounceInRight');
+    
+  }
+  }
+
   
   if ($(this).scrollTop() > 300) {
           $('.fotoin').css('visibility', 'visible').addClass('animated bounceInLeft');
@@ -66,12 +71,14 @@ jQuery(document).ready(function($) {
   });
   /* Форма отправки письма*/
   $('#emailform').click(function() {
-    $(this).css('right', '56px');
-    $('.semdmail').css('display', 'block');
+    $('.semdmail').animate({
+      marginRight: '0px'},
+      400);
   });
   $('#close').click(function() {
-    $('#emailform').css('right', '0px');
-    $('.semdmail').css('display', 'none');
+     $('.semdmail').animate({
+      marginRight: '-500px'},
+      700);
   });
   /*Слайдер*/
   

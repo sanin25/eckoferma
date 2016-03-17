@@ -310,6 +310,10 @@ body {
   top: 32px;
   cursor: pointer;
 }
+.forma .semdmail {
+  margin-right: -400px;
+  float: right;
+}
 .forma #close {
   height: 37px;
   z-index: 6;
@@ -346,6 +350,8 @@ body {
 }
 .forma form input {
   height: 28px;
+  float: right;
+  margin-right: 6px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -354,7 +360,6 @@ body {
   -moz-box-shadow: 0px 0px 8px 0px #13d129 inset;
   -webkit-box-shadow: 0px 0px 8px 0px #13d129 inset;
   box-shadow: 0px 0px 8px 0px #13d129 inset;
-  border: none;
 }
 
 .hidden {

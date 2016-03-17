@@ -35,12 +35,13 @@
 <?php
 	wp_head(); // Необходимо для работы плагинов и функционала wp
 ?>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body>
 <!-- Форма отправки почты -->
 <div class="forma">
 <img id="emailform" src="<?php echo get_template_directory_uri();?>/img/vopros.png">
-<div class="hidden semdmail">
+<div class="semdmail">
 	<form id="form"> 
 <img id="close" src="<?php echo get_template_directory_uri();?>/img/close.png">
 	<p>Отправить письмо</p><br/>

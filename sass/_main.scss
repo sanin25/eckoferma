@@ -286,6 +286,10 @@ body {
     top: 32px;
     cursor: pointer;
 	}
+	.semdmail{
+		margin-right: -400px;
+		float: right;
+	}
 	#close{
 		height: 37px;
 		z-index: 6;
@@ -319,10 +323,12 @@ body {
 		}
 		input{
 			    height: 28px;
+			    float: right;
+			    margin-right: 6px; 
 			    @include border-radius(8px);
 			    &:hover{
 			    	@include box-shadow (0px 0px 8px 0px rgba(19,209,41,1)inset);
-			    	border:none;
+			    	 
 
 			    }
 		}

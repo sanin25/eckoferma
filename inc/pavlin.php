@@ -12,6 +12,7 @@
 		$args = array(
 			'posts_per_page' => 3,
 			'category__in' => 4
+			
 		);
 	 $query = new WP_Query($args); ?>
 	<h3><a href="<?php echo get_category_link(2); ?>">Павлины</a></h3>
