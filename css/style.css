@@ -302,7 +302,7 @@ section {
   z-index: 5;
 }
 .forma img {
-  height: 250px;
+  height: 190px;
   float: left;
   position: relative;
   right: 0;
@@ -418,70 +418,39 @@ section {
   color: #0e5505;
 }
 
-/* Styles for dialog window */
-#small-dialog {
-  background: white;
-  padding: 20px 30px;
-  text-align: left;
-  max-width: 400px;
-  margin: 40px auto;
+.kontackt {
+  position: fixed;
+  right: -274px;
+  z-index: 6;
+  top: 254px;
+  background: orange;
+}
+.kontackt #close2 {
+  height: 37px;
+  z-index: 6;
+  position: absolute;
+  left: -12px;
+  top: -9px;
+  display: none;
+}
+.kontackt #close2:hover {
+  background: url(../img/close-hover.png) 0 0 no-repeat;
+}
+.kontackt > img {
+  height: 197px;
+  cursor: pointer;
+  float: left;
   position: relative;
+  right: 45px;
 }
-
-/**
- * Fade-zoom animation for first dialog
- */
-/* start state */
-.my-mfp-zoom-in .zoom-anim-dialog {
-  opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transform: scale(0.8);
+.kontackt ul {
+  float: right;
+  list-style-type: none;
 }
-
-/* animate in */
-.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-
-/* animate out */
-.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transform: scale(0.8);
-  opacity: 0;
-}
-
-/* Dark overlay, start state */
-.my-mfp-zoom-in.mfp-bg {
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
-  transition: opacity 0.3s ease-out;
-}
-
-/* animate in */
-.my-mfp-zoom-in.mfp-ready.mfp-bg {
-  opacity: 0.8;
-}
-
-/* animate out */
-.my-mfp-zoom-in.mfp-removing.mfp-bg {
-  opacity: 0;
+.kontackt ul li {
+  float: right;
+  margin-top: 25px;
+  margin-right: 50px;
 }
 
 .bx-wrapper {
@@ -660,7 +629,6 @@ section {
   background: url(../img/bg-cat.png) 0 0 repeat;
 }
 section .wrapper {
-  width: 90%;
   margin: 0 auto;
 }
 section h1 {
@@ -674,6 +642,7 @@ section h1 {
 section .cat {
   visibility: visible !important;
   background: url(../img/bg-plit.jpg) 0 0 repeat;
+  height: 430px;
 }
 section .cat hr {
   position: relative;
@@ -697,6 +666,9 @@ section .cat h2 {
 section .cat .cattext {
   margin: 0;
   padding: 0;
+}
+section .cat .cattext .more {
+  margin-top: 8px;
 }
 section .cat .cattext .cattextin {
   background: rgba(150, 149, 149, 0.58);

@@ -19,7 +19,6 @@
  	width: 100%;
  	background:url(../img/bg-cat.png) 0 0 repeat;
  	.wrapper{
- 		width: 90%;
  		margin:0 auto;
  	}
  		h1{
@@ -34,6 +33,7 @@
  		@extend .gusi ;
  		visibility: visible!important;
  		background: url(../img/bg-plit.jpg) 0 0 repeat;
+ 		height: 430px;
  		hr{
  			position: relative;
  			top: -13px;
@@ -56,6 +56,9 @@
  			@extend .gusitext;
  			margin:0;
  			padding: 0;
+ 			.more{
+ 				margin-top: 8px;
+ 			}
  			.cattextin{
  				background: rgba(150, 149, 149, 0.58);
 			    margin: 12px 1px 0 1px;

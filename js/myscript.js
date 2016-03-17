@@ -80,6 +80,19 @@ jQuery.fn.exist = function() {
       marginRight: '-500px'},
       700);
   });
+
+    $('#konimg').click(function() {
+    $('.kontackt').animate({
+      right: '0px'},
+      400);
+    $('#close2').css('display', 'block');
+  });
+      $('#close2').click(function() {
+     $('.kontackt').animate({
+      right: '-274px'},
+      700);
+     $(this).css('display', 'none');
+  });
   /*Слайдер*/
   
     $('.bxslider').bxSlider({
