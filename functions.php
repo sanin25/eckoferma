@@ -60,4 +60,24 @@ function register_mystyle()
          $output = ''.$output.'';
     echo $output;
     }
+     /*ajax запросы*/
+    
+    function my_mail_callback(){
+      $recepient = "tootii@mail.ru";
+      $name = trim($_POST["name"]);
+      $mail= trim($_POST["mail"]);
+      $text = trim($_POST["textarea"]);
+      $message = "Имя: $name \nПочта: $mail \nТекст: $text";
+    $pagetitle = "Новая заявка с сайта \"$sitename\"";
+    $headers[] = 'From: Миша <tootii@mail.ru>';
+    $headers[] = 'Content-type: text/html; charset=utf-8';
+     
+       if (wp_mail($recepient, $pagetitle, $message, $headers))
+        echo "Сообщения отправлено!";
+       else
+        echo "Не отправлено!";
+       die();
+    }
+    add_action('wp_ajax_my_mail', 'my_mail_callback');
+    add_action('wp_ajax_nopriv_my_mail', 'my_mail_callback');
 ?>

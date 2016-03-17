@@ -51,7 +51,7 @@
 		</div>
 		<div class="formblock">
 			<label for="mail">Ваша почта:</label>
-			<input type="text" name="mail"  placeholder="Почта">
+			<input type="email" name="mail" required placeholder="Почта">
 			<input type="hidden" name="action" value="my_mail" />
 		</div>
 		<textarea name="textarea" cols="40" rows="10" maxlength="1500" placeholder="Задать вопрос" ></textarea>

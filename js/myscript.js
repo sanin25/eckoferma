@@ -91,5 +91,23 @@ jQuery.fn.exist = function() {
     	  speed: 49000
 
     	});
+    /*Отправка письма*/
+
+    $("#form").submit(function() {
+    $.ajax({
+      type: "POST",
+      url: "/wp-admin/admin-ajax.php",
+      data: $(this).serialize()
+    }).done(function(vot) {
+      
+      alert(vot);
+      $("#form")[0].reset();
+      $('.semdmail').animate({
+      marginRight: '-500px'},
+      700);
+    });
+    return false;
+  });
+
   
 });
