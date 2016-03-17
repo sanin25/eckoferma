@@ -337,3 +337,24 @@ body {
 .hidden{
 	display:none;
 }
+.katalog{
+	position:relative;
+	width: 100%;
+	ul{
+		list-style-type: none;
+		margin: 0 auto;
+		width: 90%;
+		li{
+			float: left;
+		    width: 350px;
+		    word-wrap: break-word;
+		    display: block;
+		    border: 1px solid;
+		    margin-left: 10px;
+		    margin:0 auto;
+		}
+	}
+}
+.bx-viewport{
+	overflow:visible !important;
+}

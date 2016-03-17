@@ -8,31 +8,35 @@
  */
 
 get_header(); // Подключаем хедер ?>
-<div class="table-cell">
-<div class="centeritem clearfix" >
 <div class="gatpost">
-	<div class="katalog">
-<h1>Раздел <?php wp_title(''); // Заголовок категории ?></h1>
-					<ul>
-						<?php if (have_posts()) : while (have_posts()) : the_post(); // Цикл записей ?>
-							<li>
-							<h2><?php the_title(); ?> </h2>
-							<br/>
-							<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(80,70));?></a>
+	<div class="cetegory clearfix">
+<h1><?php wp_title(''); // Заголовок категории ?></h1>
+				
+		<?php if (have_posts()) : while (have_posts()) : the_post(); // Цикл записей ?>
+				<div class="cat">
+					<h2><?php the_title(); ?></h2>
+					<hr>
+						<div class="catimg">
+								<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(300,200));?></a>
+						</div>		
+						<div class="cattext">
+							<div class="cattextin">
 								<?php
 									announcement('segment_length','segment_more'); 
 								?>
-								<a href="<?php the_permalink(); ?>">
-								<br/>
-								<div class="more">
+							</div>
+							<a href="<?php the_permalink(); ?>">
+							<div class="more">
 								<i class="fa fa-hand-o-right"></i>
-								<span class="more">Читать полностью »</span>
-								</div>
-							</a>
-							<br/>
-						</li>
-					<?php endwhile; ?>
-				</ul>
+								<span >Читать полностью »</span>
+							</div>
+						</a>
+						</div>
+										
+				</div>
+		<?php endwhile; ?>
+		<?php wp_reset_postdata();?>
+				
 			</div>
 <?php else: echo '<h2>Извините, ничего не найдено...</h2>'; endif; // Если записей нет - извиняемся ?>	 
 <?php // Пагинация
@@ -48,9 +52,6 @@ echo paginate_links( array(
 	'total' => $wp_query->max_num_pages
 ) );
 ?>
-</div>
-</div>
-</div>
- 
+</div> 
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>

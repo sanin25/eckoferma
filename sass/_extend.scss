@@ -1,5 +1,5 @@
 .pavlinbody{
-	@extend .gusibody ;
+	@extend .gusibody;
 }
 .pavlin{
 	@extend .gusi ;
@@ -12,4 +12,40 @@
 }
  .kyri{
  	@extend .gusi;
+ }
+ .cetegory{
+ 	@extend .gusibody; 
+ 	.cat{
+ 		@extend .gusi ;
+ 		visibility: visible!important;
+ 		background: url(../img/bg-plit.jpg) 0 0 repeat;
+ 		hr{
+ 			position: relative;
+ 			top: -13px;
+ 			border: 0;
+ 			height: 2px;
+ 			@include background-image(linear-gradient(left, transparent, rgba(0, 0, 0, 0.45), transparent));
+ 			 
+ 		}
+ 		h2{
+ 			font-size: 128% ;
+ 			color:$color_link;
+ 			padding: 10px 0 17px 0;
+ 			font-family: cursive;
+ 			line-height: 0.9;
+ 		}
+ 		.catimg{
+			@extend .gusiimg;
+ 		}
+ 		.cattext{
+ 			@extend .gusitext;
+ 			margin:0;
+ 			padding: 0;
+ 			.cattextin{
+ 				background: rgba(150, 149, 149, 0.58);
+			    margin: 12px 1px 0 1px;
+			    padding:10px;
+ 			}
+ 		}
+ 	}
  }
