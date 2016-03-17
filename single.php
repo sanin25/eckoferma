@@ -6,6 +6,8 @@
  * @subpackage fermerjeck
  */
 get_header(); // Подключаем хедер?> 
+<?php if ( function_exists('yoast_breadcrumb') ) 
+{yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
 <h1><?php the_title(); // Заголовок ?></h1>
 <?php the_content(); // Содержимое страницы ?>

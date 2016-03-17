@@ -29,7 +29,7 @@ body {
 	width: auto;
 	display: block;
 }
-.container {
+section {
 	display: table;
 	width: 100%;
 	max-width: 1920px;
@@ -205,6 +205,7 @@ body {
 	z-index: 3;
 }
 .gusibody {
+	margin: 0 auto;
 	h3 {
 		a {
 			text-align: center;
@@ -222,8 +223,6 @@ body {
 		}
 		margin-top: 20px;
 	}
-	margin: 0 auto;
-	top: 50px;
 }
 .gusi {
 	margin-top: 50px;
@@ -364,6 +363,14 @@ body {
 	font-size: 136%;
 	font-family: cursive;
 	letter-spacing: 1px;
+	.breadcrumb_last{
+		background: rgb(195, 178, 126);
+	    margin-right: -9px;
+	    padding: 16px;
+	    @include border-radius (10px);
+	    @include box-shadow (0px 0px 11px 0px rgba(196,165,39,1));
+	    border: 2px solid #E9E9E9;
+	}
 	>span{
 		background: rgba(168, 191, 169, 0.56);
 		padding: 10px;

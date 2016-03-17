@@ -30,7 +30,7 @@ body {
   display: block;
 }
 
-.container {
+section {
   display: table;
   width: 100%;
   max-width: 1920px;
@@ -219,14 +219,13 @@ body {
   z-index: 3;
 }
 
-.gusibody, .pavlinbody, .cetegory {
+.gusibody, .pavlinbody, section {
   margin: 0 auto;
-  top: 50px;
 }
-.gusibody h3, .pavlinbody h3, .cetegory h3 {
+.gusibody h3, .pavlinbody h3, section h3 {
   margin-top: 20px;
 }
-.gusibody h3 a, .pavlinbody h3 a, .cetegory h3 a {
+.gusibody h3 a, .pavlinbody h3 a, section h3 a {
   text-align: center;
   background: rgba(178, 171, 171, 0.51);
   clear: both;
@@ -237,11 +236,11 @@ body {
   position: relative;
   margin-bottom: 50px;
 }
-.gusibody h3 a:hover, .pavlinbody h3 a:hover, .cetegory h3 a:hover {
+.gusibody h3 a:hover, .pavlinbody h3 a:hover, section h3 a:hover {
   color: #13007A;
 }
 
-.gusi, .pavlin, .kyri, .cetegory .cat {
+.gusi, .pavlin, .kyri, section .cat {
   margin-top: 50px;
   border: 1px solid #ddd;
   width: 310px;
@@ -263,10 +262,10 @@ body {
   background-size: cover;
 }
 
-.gusiimg, .pavlinimg, .cetegory .cat .catimg {
+.gusiimg, .pavlinimg, section .cat .catimg {
   overflow: hidden;
 }
-.gusiimg img, .pavlinimg img, .cetegory .cat .catimg img {
+.gusiimg img, .pavlinimg img, section .cat .catimg img {
   width: 100%;
   height: 230px;
   display: block;
@@ -276,19 +275,19 @@ body {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-.gusiimg img:hover, .pavlinimg img:hover, .cetegory .cat .catimg img:hover {
+.gusiimg img:hover, .pavlinimg img:hover, section .cat .catimg img:hover {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.gusitext, .pavlintext, .cetegory .cat .cattext {
+.gusitext, .pavlintext, section .cat .cattext {
   position: relative;
   margin-top: -13px;
   padding: 18px;
 }
-.gusitext h2 a, .pavlintext h2 a, .cetegory .cat .cattext h2 a {
+.gusitext h2 a, .pavlintext h2 a, section .cat .cattext h2 a {
   color: #0E5505;
   font-size: 77%;
 }
@@ -395,6 +394,18 @@ body {
   font-size: 136%;
   font-family: cursive;
   letter-spacing: 1px;
+}
+#breadcrumbs .breadcrumb_last {
+  background: #c3b27e;
+  margin-right: -9px;
+  padding: 16px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0px 0px 11px 0px #c4a527;
+  -webkit-box-shadow: 0px 0px 11px 0px #c4a527;
+  box-shadow: 0px 0px 11px 0px #c4a527;
+  border: 2px solid #E9E9E9;
 }
 #breadcrumbs > span {
   background: rgba(168, 191, 169, 0.56);
@@ -578,15 +589,15 @@ ul.bxslider {
   -webkit-transform: translatez(0);
 }
 
-.cetegory {
+section {
   width: 100%;
   background: url(../img/bg-cat.png) 0 0 repeat;
 }
-.cetegory .wrapper {
+section .wrapper {
   width: 90%;
   margin: 0 auto;
 }
-.cetegory h1 {
+section h1 {
   text-align: center;
   border-bottom: 7px solid #F2FF29;
   border-top: 5px solid #1932E6;
@@ -594,11 +605,11 @@ ul.bxslider {
   color: #0e5505;
   background: url(../img/bg-h1.png) 0 0 repeat;
 }
-.cetegory .cat {
+section .cat {
   visibility: visible !important;
   background: url(../img/bg-plit.jpg) 0 0 repeat;
 }
-.cetegory .cat hr {
+section .cat hr {
   position: relative;
   top: -13px;
   border: 0;
@@ -610,18 +621,18 @@ ul.bxslider {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
 }
-.cetegory .cat h2 {
+section .cat h2 {
   font-size: 128%;
   color: #0e5505;
   padding: 10px 0 17px 0;
   font-family: cursive;
   line-height: 0.9;
 }
-.cetegory .cat .cattext {
+section .cat .cattext {
   margin: 0;
   padding: 0;
 }
-.cetegory .cat .cattext .cattextin {
+section .cat .cattext .cattextin {
   background: rgba(150, 149, 149, 0.58);
   margin: 12px 1px 0 1px;
   padding: 10px;
