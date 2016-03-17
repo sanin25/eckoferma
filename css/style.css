@@ -297,6 +297,70 @@ body {
   clear: both;
 }
 
+.forma {
+  position: fixed;
+  right: 0;
+  z-index: 5;
+}
+.forma img {
+  height: 250px;
+  float: left;
+  position: relative;
+  right: 0;
+  top: 32px;
+  cursor: pointer;
+}
+.forma #close {
+  height: 37px;
+  z-index: 6;
+  position: absolute;
+  left: -12px;
+  top: -9px;
+}
+.forma #close:hover {
+  background: url(../img/close-hover.png) 0 0 no-repeat;
+}
+.forma form {
+  background: #3D9DE4;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  position: relative;
+  top: 20px;
+  font-family: cursive;
+}
+.forma form button {
+  left: 112px;
+  bottom: 19px;
+  padding: 8px;
+  position: relative;
+}
+.forma form button:hover {
+  border: 2px solid #red;
+}
+.forma form p {
+  font-size: 131%;
+  position: relative;
+  top: 18px;
+  color: #0e5505;
+}
+.forma form input {
+  height: 28px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+.forma form input:hover {
+  -moz-box-shadow: 0px 0px 8px 0px #13d129 inset;
+  -webkit-box-shadow: 0px 0px 8px 0px #13d129 inset;
+  box-shadow: 0px 0px 8px 0px #13d129 inset;
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
 .bx-wrapper {
   position: relative;
   margin: 0 auto 60px;

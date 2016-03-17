@@ -37,3 +37,28 @@
 ?>
 </head>
 <body>
+<!-- Форма отправки почты -->
+<div class="forma">
+<img id="emailform" src="<?php echo get_template_directory_uri();?>/img/vopros.png">
+<div class="hidden semdmail">
+	<form id="form"> 
+<img id="close" src="<?php echo get_template_directory_uri();?>/img/close.png">
+	<p>Отправить письмо</p><br/>
+		<div class="formblock">
+			<label for="name">Ваше имя:</label>
+			<input type="text" name="name"  placeholder="Имя" required>
+		</div>
+		<div class="formblock">
+			<label for="mail">Ваша почта:</label>
+			<input type="text" name="mail"  placeholder="Почта">
+			<input type="hidden" name="action" value="my_mail" />
+		</div>
+		<textarea name="textarea" cols="40" rows="10" maxlength="1500" placeholder="Задать вопрос" ></textarea>
+		<br/>
+		<br/>
+		<button>Отправить</button>
+	</form>
+	
+</div>
+</div>
+

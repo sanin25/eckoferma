@@ -1,3 +1,6 @@
+jQuery.fn.exists = function() {
+   return $(this).length;
+}
 jQuery(document).ready(function($) {
   function setHeiHeight() {
       $('.container').css({
@@ -61,7 +64,15 @@ jQuery(document).ready(function($) {
           $('.foto h3').css('visibility', 'visible').addClass('animated bounceInUp');
       }
   });
-
+  /* Форма отправки письма*/
+  $('#emailform').click(function() {
+    $(this).css('right', '56px');
+    $('.semdmail').css('display', 'block');
+  });
+  $('#close').click(function() {
+    $('#emailform').css('right', '0px');
+    $('.semdmail').css('display', 'none');
+  });
   /*Слайдер*/
   
     $('.bxslider').bxSlider({
