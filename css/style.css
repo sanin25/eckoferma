@@ -219,13 +219,13 @@ section {
   z-index: 3;
 }
 
-.gusibody, .pavlinbody, section {
+.gusibody, .pavlinbody, .category {
   margin: 0 auto;
 }
-.gusibody h3, .pavlinbody h3, section h3 {
+.gusibody h3, .pavlinbody h3, .category h3 {
   margin-top: 20px;
 }
-.gusibody h3 a, .pavlinbody h3 a, section h3 a {
+.gusibody h3 a, .pavlinbody h3 a, .category h3 a {
   text-align: center;
   background: rgba(178, 171, 171, 0.51);
   clear: both;
@@ -236,11 +236,11 @@ section {
   position: relative;
   margin-bottom: 50px;
 }
-.gusibody h3 a:hover, .pavlinbody h3 a:hover, section h3 a:hover {
+.gusibody h3 a:hover, .pavlinbody h3 a:hover, .category h3 a:hover {
   color: #13007A;
 }
 
-.gusi, .pavlin, .kyri, section .cat {
+.gusi, .pavlin, .kyri, .category .cat {
   margin-top: 50px;
   border: 1px solid #ddd;
   width: 310px;
@@ -262,10 +262,10 @@ section {
   background-size: cover;
 }
 
-.gusiimg, .pavlinimg, section .cat .catimg {
+.gusiimg, .pavlinimg, .category .cat .catimg {
   overflow: hidden;
 }
-.gusiimg img, .pavlinimg img, section .cat .catimg img {
+.gusiimg img, .pavlinimg img, .category .cat .catimg img {
   width: 100%;
   height: 230px;
   display: block;
@@ -275,19 +275,19 @@ section {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
-.gusiimg img:hover, .pavlinimg img:hover, section .cat .catimg img:hover {
+.gusiimg img:hover, .pavlinimg img:hover, .category .cat .catimg img:hover {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-.gusitext, .pavlintext, section .cat .cattext {
+.gusitext, .pavlintext, .category .cat .cattext {
   position: relative;
   margin-top: -13px;
   padding: 18px;
 }
-.gusitext h2 a, .pavlintext h2 a, section .cat .cattext h2 a {
+.gusitext h2 a, .pavlintext h2 a, .category .cat .cattext h2 a {
   color: #0E5505;
   font-size: 77%;
 }
@@ -460,9 +460,6 @@ section {
   background: #4B8D10;
   color: white !important;
 }
-.kontackt ul li #ok {
-  color: orange;
-}
 .kontackt ul #vk {
   color: rgba(0, 18, 255, 0.79);
 }
@@ -472,6 +469,22 @@ section {
 .kontackt ul #lastli {
   margin-right: 109px;
   font-size: 131%;
+}
+
+.singl {
+  background: url(../img/bg-cat.png) 0 0 repeat;
+}
+.singl .wrapper {
+  padding: 0 200px 0 100px;
+  position: relative;
+}
+.singl .wrapper h1 {
+  text-align: center;
+  margin: 10px 0 25px 0;
+  font-family: sans-serif;
+  font-size: 164%;
+  letter-spacing: 4px;
+  color: #0e5505;
 }
 
 .bx-wrapper {
@@ -645,14 +658,14 @@ ul.bxslider {
   -webkit-transform: translatez(0);
 }
 
-section {
+.category {
   width: 100%;
   background: url(../img/bg-cat.png) 0 0 repeat;
 }
-section .wrapper {
+.category .wrapper {
   margin: 0 auto;
 }
-section h1 {
+.category h1 {
   text-align: center;
   border-bottom: 7px solid #F2FF29;
   border-top: 5px solid #1932E6;
@@ -660,12 +673,12 @@ section h1 {
   color: #0e5505;
   background: url(../img/bg-h1.png) 0 0 repeat;
 }
-section .cat {
+.category .cat {
   visibility: visible !important;
   background: url(../img/bg-plit.jpg) 0 0 repeat;
   height: 430px;
 }
-section .cat hr {
+.category .cat hr {
   position: relative;
   top: -13px;
   border: 0;
@@ -677,21 +690,21 @@ section .cat hr {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0));
 }
-section .cat h2 {
+.category .cat h2 {
   font-size: 128%;
   color: #0e5505;
   padding: 10px 0 17px 0;
   font-family: cursive;
   line-height: 0.9;
 }
-section .cat .cattext {
+.category .cat .cattext {
   margin: 0;
   padding: 0;
 }
-section .cat .cattext .more {
+.category .cat .cattext .more {
   margin-top: 8px;
 }
-section .cat .cattext .cattextin {
+.category .cat .cattext .cattextin {
   background: rgba(150, 149, 149, 0.58);
   margin: 12px 1px 0 1px;
   padding: 10px;

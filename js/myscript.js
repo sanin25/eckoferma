@@ -3,7 +3,7 @@ jQuery.fn.exist = function() {
    return $(this).length;
 }
   function setHeiHeight() {
-      $('section').css({
+      $('.heigh').css({
           height: $(window).height() + 'px'
       });
   }

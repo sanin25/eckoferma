@@ -417,9 +417,6 @@ section {
     					background:#4B8D10;
     					color:white !important;  
     						}
-    				#ok{
-    					color:orange;
-    				}
 				}
     				#vk{
 					    color: rgba(0, 18, 255, 0.79);
@@ -433,3 +430,18 @@ section {
     		}
     		}
 	}
+.singl{	
+	background:url(../img/bg-cat.png) 0 0 repeat;
+.wrapper{
+    padding: 0 200px 0 100px;
+	position: relative;
+	h1{
+		text-align: center;
+		margin: 10px 0 25px 0;
+		font-family: sans-serif;
+		font-size: 164%;
+		letter-spacing: 4px;
+		color:$color_link;
+	}
+}
+}
