@@ -391,14 +391,13 @@ section {
 
 #breadcrumbs {
   padding: 20px;
-  font-size: 136%;
+  font-size: 120%;
   font-family: cursive;
   letter-spacing: 1px;
 }
 #breadcrumbs .breadcrumb_last {
-  background: #c3b27e;
   margin-right: -9px;
-  padding: 16px;
+  padding: 9px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -420,7 +419,7 @@ section {
 
 .kontackt {
   position: fixed;
-  right: -274px;
+  right: -400px;
   z-index: 6;
   top: 254px;
   background: orange;
@@ -449,8 +448,30 @@ section {
 }
 .kontackt ul li {
   float: right;
-  margin-top: 25px;
-  margin-right: 50px;
+  margin: 25px;
+  padding: 20px;
+  background: #FFFCFC;
+  -moz-border-radius: 80px 4px 84px 86px;
+  -webkit-border-radius: 80px;
+  border-radius: 80px 4px 84px 86px;
+  color: orange;
+}
+.kontackt ul li:hover {
+  background: #4B8D10;
+  color: white !important;
+}
+.kontackt ul li #ok {
+  color: orange;
+}
+.kontackt ul #vk {
+  color: rgba(0, 18, 255, 0.79);
+}
+.kontackt ul #fecbook {
+  color: #0006FF;
+}
+.kontackt ul #lastli {
+  margin-right: 109px;
+  font-size: 131%;
 }
 
 .bx-wrapper {

@@ -89,7 +89,7 @@ jQuery.fn.exist = function() {
   });
       $('#close2').click(function() {
      $('.kontackt').animate({
-      right: '-274px'},
+      right: '-400px'},
       700);
      $(this).css('display', 'none');
   });

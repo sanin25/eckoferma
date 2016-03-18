@@ -360,13 +360,12 @@ section {
 }
 #breadcrumbs{
 	padding: 20px;
-	font-size: 136%;
+	font-size: 120%;
 	font-family: cursive;
 	letter-spacing: 1px;
 	.breadcrumb_last{
-		background: rgb(195, 178, 126);
 	    margin-right: -9px;
-	    padding: 16px;
+	    padding: 9px;
 	    @include border-radius (10px);
 	    @include box-shadow (0px 0px 11px 0px rgba(196,165,39,1));
 	    border: 2px solid #E9E9E9;
@@ -382,7 +381,7 @@ section {
 }
 .kontackt{
 	position: fixed;
-	right: -274px;;
+	right: -400px;;
 	z-index: 6;
 	top: 254px;
 	background: rgb(255, 165, 0);
@@ -409,8 +408,28 @@ section {
     		list-style-type: none;
     		li{
     			float: right;
-    			margin-top: 25px;
-    			margin-right: 50px;
+    			margin: 25px;
+    			padding: 20px;
+    			background: #FFFCFC;
+    			@include border-radius(80px 4px 84px 86px);
+    				color: orange;
+    				&:hover{
+    					background:#4B8D10;
+    					color:white !important;  
+    						}
+    				#ok{
+    					color:orange;
+    				}
+				}
+    				#vk{
+					    color: rgba(0, 18, 255, 0.79);
+    				}
+    				#fecbook{
+					    color: #0006FF;
+    				}
+    		#lastli{
+    			margin-right: 109px;
+    			font-size: 131%;
+    		}
     		}
 	}
-}
