@@ -432,7 +432,7 @@ section {
 	}
 .singl{	
 	background:url(../img/bg-cat.png) 0 0 repeat;
-.wrapper{
+.wrap{
     padding: 0 200px 0 100px;
 	position: relative;
 	h1{
@@ -442,6 +442,25 @@ section {
 		font-size: 164%;
 		letter-spacing: 4px;
 		color:$color_link;
+
+	}
+	.textsingle{
+		word-wrap: break-word;
+		width: 80%;
+		position: relative;
+		left: 10%;
+		background: rgba(132, 236, 88, 0.12);
+		padding: 26px;
+		border-radius: 20px;
 	}
 }
+}
+.singleimg{
+	img{
+	margin-left: 20%;
+	text-align: center;
+	border: 2px solid rgba(35, 160, 19, 0.42);
+	border-radius: 26px;
+	padding: 2px;
+		}
 }

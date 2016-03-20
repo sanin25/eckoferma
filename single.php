@@ -9,42 +9,47 @@ get_header(); // Подключаем хедер?>
 <section class="singl">
 <?php if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
-<div class="wrapper">
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
-<h1><?php the_title(); // Заголовок ?></h1>
-
+<div class="wrap">
 <?php
+	$images = new WP_Query( array(
+    'post_parent' => get_the_ID(),
+    'post_status' => 'inherit',
+    'post_type' => 'attachment',
+    'post_mime_type' => 'image',
+    'order' => 'ASC',
+    'orderby' => 'menu_order ID',
+    'posts_per_page' => 1,
+    'post__not_in' => array($thumb_id),
+    'update_post_term_cache' => false,
+) ); 
+     
+?>
+	<div class="singleimg">
+	<h1><?php the_title(); // Заголовок ?></h1>
+	<?php 
 
-$sub = $post->post_content;
-$pattern = "/^\[.*?\] (\D+)/";
-
-  preg_match_all($pattern, $sub, $mat,PREG_PATTERN_ORDER);
-  var_dump($mat);
-  
-  echo do_shortcode($mat[0][0]);
-   
-    
- ?>
-<div class="first_block">
-    <span class="myimage"><?php
-    /* $textonly;
-     $pattern = '/(^\[gallery .*?\])/';
-     $replacement = "";
-    echo preg_replace($pattern, $replacement, $textonly);
-    echo preg_replace($pattern, $replacement, $textonly);
-
-    foreach($matches[0] as $key){
-    	echo $key;
-    }*/
-       
-    ?>
-    </span>
-    
-
-</div>
-
+	foreach ($images->posts as $image)
+	{
+		echo '<a href="'.get_permalink($image->ID).'">'.wp_get_attachment_image( $image->ID, array(450,450)).'</a>';
+	} 
+	?>
+	</div>
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); // Начало цикла ?>
+	<?php
+		$sub = $post->post_content;
+		$pattern = "/([\]]{1}?)/";
+		$mat = preg_split($pattern, $sub);
+	?>
+	   	<div class="textsingle">
+	   		<p><?php echo $mat[1]?></p>
+	   	</div>
+	   	<div class="imgsinglpage">
+	   		<?php echo do_shortcode($mat[0].']');?>
+	   	</div>
 <?php the_tags( 'Тэги: ', ' | ', '' ); // Выводим тэги(метки) поста ?>
-<?php endwhile; // Конец цикла ?>
+<?php endwhile; // Конец цикла 
+wp_reset_postdata();
+?>
 <?php comments_template( '', true ); // Комментарии ?>
 </div>
 </section>

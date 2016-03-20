@@ -8,8 +8,8 @@
  */
 
 get_header(); // Подключаем хедер ?>
-<div class="gatpost">
-	<section class="clearfix">
+
+	<section class="category clearfix">
 	<?php if ( function_exists('yoast_breadcrumb') ) 
 {yoast_breadcrumb('<p id="breadcrumbs">','</p>');} ?>
 
@@ -42,7 +42,6 @@ get_header(); // Подключаем хедер ?>
 		</div>
 		<?php wp_reset_postdata();?>
 				
-			</section>
 <?php else: echo '<h2>Извините, ничего не найдено...</h2>'; endif; // Если записей нет - извиняемся ?>	 
 <?php // Пагинация
 global $wp_query;
@@ -57,6 +56,6 @@ echo paginate_links( array(
 	'total' => $wp_query->max_num_pages
 ) );
 ?>
-</div> 
+</section>
 <?php get_sidebar(); // Подключаем сайдбар ?>
 <?php get_footer(); // Подключаем футер ?>
